@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Job Genie",
+  "version": "1.4.1",
+  "description": "Search LinkedIn, Indeed, Naukri, Monster/foundit and JobStreet at once, compare postings with their age on one page, and read job requirements.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://*.linkedin.com/*",
+    "https://*.indeed.com/*",
+    "https://*.naukri.com/*",
+    "https://*.foundit.in/*",
+    "https://*.jobstreet.com/*",
+    "https://*.jobstreet.com.my/*",
+    "https://*.jobstreet.com.sg/*",
+    "https://*.jobstreet.com.ph/*",
+    "https://*.jobstreet.co.id/*",
+    "https://*.seek.com/*"
+  ],
+  "action": {
+    "default_title": "Job Genie",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

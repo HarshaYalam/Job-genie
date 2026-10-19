@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Job Genie</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<header>
+  <img src="images/genie-mini.gif" alt="Job Genie" class="logo">
+  <div><h1>Job Genie</h1><p>Your wish: the right job 🧞 · v1.4</p></div>
+</header>
+
+<nav>
+  <button class="tab active" data-tab="search">Search</button>
+  <button class="tab" data-tab="reqs">Requirements</button>
+</nav>
+
+<section id="search" class="pane active">
+  <button class="primary hero" id="cv">📄 Upload CV &amp; get matching jobs</button>
+  <div class="or">or search manually</div>
+  <label>Job title<input id="title" placeholder="e.g. Data Analyst"></label>
+  <label>Location<input id="loc" placeholder="e.g. Hyderabad"></label>
+  <div class="two">
+    <label>Experience
+      <select id="lvl">
+        <option value="0">Fresher (0-1 yrs)</option>
+        <option value="2">Junior (2-3 yrs)</option>
+        <option value="5">Mid (4-7 yrs)</option>
+        <option value="8">Senior (8+ yrs)</option>
+        <option value="12">Director / Exec</option>
+      </select>
+    </label>
+    <label>Country
+      <select id="cty">
+        <option value="in">India</option><option value="sg">Singapore</option><option value="my">Malaysia</option>
+        <option value="ph">Philippines</option><option value="id">Indonesia</option><option value="us">United States</option>
+      </select>
+    </label>
+  </div>
+  <div class="actions">
+    <button class="primary" id="go">🧞 Search all portals (last 7 days)</button>
+    <button class="ghost" id="tabs" style="margin-top:6px">Open each site in separate tabs</button>
+  </div>
+  <div id="boards"></div>
+</section>
+
+<section id="reqs" class="pane">
+  <p class="hint">Open any job posting, then read its requirements. Select text on the page first to read only that part.</p>
+  <button class="primary" id="page">📄 Read this page</button>
+  <textarea id="jd" placeholder="...or paste a job description here"></textarea>
+  <button class="ghost" id="an">Show requirements</button>
+  <div id="req"></div>
+</section>
+
+<script src="common.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>

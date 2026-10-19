@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.zip
+*.log
+# never commit personal CVs
+*.pdf
+*.docx
+cv*/

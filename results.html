@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Job Genie</title>
+<link rel="stylesheet" href="results.css">
+</head>
+<body>
+<div class="wrap">
+<img class="banner" src="images/tool-banner.png" alt="Job Genie - upload your CV, get matched jobs">
+
+<section id="cvbox" class="cvbox">
+  <div><h2>📄 Your CV</h2><p id="cvinfo" class="muted">Upload a PDF, DOCX or TXT. It is read inside your browser and never uploaded anywhere. You can also drag a file here.</p></div>
+  <input type="file" id="file" accept=".pdf,.docx,.txt" hidden>
+  <button class="primary big" id="up">📄 Upload CV &amp; find my jobs</button>
+</section>
+<div id="profile"></div>
+
+<h2 class="sec">🎯 What I'm looking for</h2>
+<form id="f" class="bar">
+  <input id="title" placeholder="Job title" required>
+  <input id="loc" placeholder="Location">
+  <select id="lvl" title="Seniority / experience level">
+    <option value="0">Fresher (0-1 yrs)</option><option value="2">Junior (2-3 yrs)</option>
+    <option value="5" selected>Mid-level (4-7 yrs)</option><option value="8">Senior (8-11 yrs)</option><option value="12">Lead / Manager (12+ yrs)</option>
+  </select>
+  <select id="cty" title="Country">
+    <option value="in">India</option><option value="sg">Singapore</option><option value="my">Malaysia</option>
+    <option value="ph">Philippines</option><option value="id">Indonesia</option><option value="us">United States</option>
+  </select>
+  <select id="age" title="Posted within">
+    <option value="1">Last 24 hours</option><option value="3">Last 3 days</option><option value="7" selected>Last 7 days</option>
+    <option value="14">Last 14 days</option><option value="30">Last 30 days</option><option value="0">Any time</option>
+  </select>
+  <div class="sal"><input id="smin" type="number" min="0" step="any" placeholder="Min salary"><input id="smax" type="number" min="0" step="any" placeholder="Max salary"></div>
+  <div class="sunit muted">Salary unit: <b id="sunit"></b></div>
+  <label class="chk"><input type="checkbox" id="hide"> Hide jobs paying below my minimum</label>
+  <button class="primary" type="submit">🧞 Search</button>
+</form>
+
+<div id="status" class="status"></div>
+
+<div class="tools">
+  <input id="q" placeholder="Filter results by company or keyword">
+  <select id="sort"><option value="match">Best CV match</option><option value="salary">Highest salary</option><option value="new">Newest first</option><option value="portal">Group by portal</option></select>
+  <button class="ghost" id="copy" type="button">Copy top 10</button>
+  <span id="count" class="muted"></span>
+</div>
+
+<div id="jobs"></div>
+<p class="muted note">Job Genie v1.4. Listings are fetched live (no cache) from each portal using your own browser session. If a portal blocks the request, its chip turns red; use "Open on site". Match % compares your CV skills, title and experience with each posting; it is a guide, not a guarantee.</p>
+</div>
+<script src="lib/pdf.min.js"></script>
+<script src="lib/jszip.min.js"></script>
+<script src="common.js"></script>
+<script src="results.js"></script>
+</body>
+</html>
